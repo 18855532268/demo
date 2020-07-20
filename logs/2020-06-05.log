@@ -1,0 +1,502 @@
+2020-06-05 09:58:26,144 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 7812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 09:58:26,149 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 09:58:26,266 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:227 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-05 09:58:26,267 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:227 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-05 09:58:27,681 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 09:58:27,682 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 09:58:27,734 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 40ms. Found 0 repository interfaces.
+2020-06-05 09:58:27,753 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 09:58:27,754 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 09:58:27,790 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2020-06-05 09:58:28,277 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e16e13b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 09:58:28,896 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 09:58:28,917 [INFO] org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-10086"]
+2020-06-05 09:58:28,931 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 09:58:28,931 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 09:58:29,102 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 09:58:29,104 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 2836 ms
+2020-06-05 09:58:29,453 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-1 - Starting...
+2020-06-05 09:58:29,777 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-1 - Start completed.
+2020-06-05 09:58:29,859 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 09:58:29,989 [INFO] org.hibernate.Version:46 - HHH000412: Hibernate Core {5.3.9.Final}
+2020-06-05 09:58:29,992 [INFO] org.hibernate.cfg.Environment:213 - HHH000206: hibernate.properties not found
+2020-06-05 09:58:30,227 [INFO] org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-05 09:58:30,502 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 09:58:30,743 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 09:58:31,559 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 09:58:31,599 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 09:58:32,188 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:57 - LiveReload server is running on port 35729
+2020-06-05 09:58:32,226 [INFO] org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-10086"]
+2020-06-05 09:58:32,257 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204 - Tomcat started on port(s): 10086 (http) with context path ''
+2020-06-05 09:58:32,261 [INFO] com.example.manage.DemoApplication:59 - Started DemoApplication in 7.396 seconds (JVM running for 10.799)
+2020-06-05 10:54:21,560 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 10812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 10:54:21,566 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 10:54:21,721 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:227 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-05 10:54:21,721 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:227 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-05 10:54:22,811 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 10:54:22,812 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 10:54:22,864 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2020-06-05 10:54:22,881 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 10:54:22,882 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 10:54:22,909 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2020-06-05 10:54:23,357 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$286b87d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 10:54:23,937 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 10:54:23,955 [INFO] org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-10086"]
+2020-06-05 10:54:23,964 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 10:54:23,966 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 10:54:24,130 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 10:54:24,131 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 2408 ms
+2020-06-05 10:54:24,450 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-1 - Starting...
+2020-06-05 10:54:24,755 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-1 - Start completed.
+2020-06-05 10:54:24,826 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 10:54:24,903 [INFO] org.hibernate.Version:46 - HHH000412: Hibernate Core {5.3.9.Final}
+2020-06-05 10:54:24,905 [INFO] org.hibernate.cfg.Environment:213 - HHH000206: hibernate.properties not found
+2020-06-05 10:54:25,089 [INFO] org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-05 10:54:25,356 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 10:54:25,618 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 10:54:26,627 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 10:54:26,667 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 10:54:27,318 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:57 - LiveReload server is running on port 35729
+2020-06-05 10:54:27,352 [INFO] org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-10086"]
+2020-06-05 10:54:27,381 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204 - Tomcat started on port(s): 10086 (http) with context path ''
+2020-06-05 10:54:27,384 [INFO] com.example.manage.DemoApplication:59 - Started DemoApplication in 6.915 seconds (JVM running for 10.128)
+2020-06-05 10:56:47,519 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-05 10:56:47,520 [INFO] org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2020-06-05 10:56:47,534 [INFO] org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 14 ms
+2020-06-05 10:56:47,573 [WARN] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:197 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-06-05 10:56:53,663 [INFO] com.example.manage.service.PayOrderService:164 - 已回款金额：0.0
+2020-06-05 10:56:53,811 [INFO] com.example.manage.service.PayOrderService:164 - 已回款金额：300.0
+2020-06-05 10:56:53,900 [INFO] com.example.manage.service.PayOrderService:164 - 已回款金额：1001.0
+2020-06-05 10:56:53,979 [INFO] com.example.manage.service.PayOrderService:164 - 已回款金额：0.0
+2020-06-05 10:56:54,031 [INFO] com.example.manage.service.PayOrderService:164 - 已回款金额：0.0
+2020-06-05 10:56:54,110 [INFO] com.example.manage.service.PayOrderService:164 - 已回款金额：0.0
+2020-06-05 10:56:54,496 [INFO] com.example.manage.service.PayOrderService:168 - 返回：[{"createtime":1590680414000,"customerName":"zhangshan","customerNum":"123","customerType":"改成这个","debt":1.0,"deliverydate":1590678924000,"deposit":1.0,"depositnum":"1","depositrate":1.0,"email":"1724868042@qq.com","id":1,"isBackMoney":0.0,"linkmanCellphone":"","linkmanName":"张三","manageUserWeChat":"yaobuyang","name":"yy","orderRemark":"1","orderdate":1590678874000,"ordernum":"12","payOrderRecordVos":[{"count":1,"discount":1.0,"imageUrl":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":1.0,"type":"2","unitprice":1.0},{"count":1,"discount":1.0,"imageUrl":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":1.0,"type":"2","unitprice":1.0},{"count":10,"discount":10.0,"imageUrl":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":10.0,"type":"2","unitprice":10.5},{"count":10,"discount":10.0,"imageUrl":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":10.0,"type":"2","unitprice":10.5},{"count":10,"discount":10.0,"imageUrl":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":10.0,"type":"2","unitprice":10.5},{"count":10,"discount":10.0,"imageUrl":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":10.0,"type":"2","unitprice":2222.0},{"changeColor":"3","count":10,"discount":0.0,"imageUrl":"1","larghezza":"4","modelNo":"1","productColor":"1","productCostPrice":1.0,"productDefaultStore":"1","productDefaultSupplier":"1","productIngredient":"1","productName":"1","productNum":"1","productPurchasing":1.0,"productSell":1.0,"productSpecification":"1","productUnit":"1","remark":"1","taxpoint":0.0,"type":"2","unitprice":0.0,"weight":"123121","weightTolerance":"2"}],"paydate":1590678916000,"paytype":"1","rental":1.0,"tax":1.0,"tellphone":"18855532268","username":"yaoby"},{"createtime":1590680414000,"customerName":"zhangshan","customerNum":"123","customerType":"改成这个","debt":-276.9,"deliverydate":1590632074000,"deposit":2.6565,"depositnum":"1234","depositrate":11.5,"email":"1724868042@qq.com","id":10,"isBackMoney":300.0,"linkmanCellphone":"","linkmanName":"张三","manageUserWeChat":"yaobuyang","name":"yy","orderRemark":"啥呀","orderdate":1590632074000,"ordernum":"12138","payOrderRecordVos":[{"$ref":"$[0].payOrderRecordVos[0]"},{"$ref":"$[0].payOrderRecordVos[1]"},{"$ref":"$[0].payOrderRecordVos[2]"},{"$ref":"$[0].payOrderRecordVos[3]"},{"$ref":"$[0].payOrderRecordVos[4]"},{"$ref":"$[0].payOrderRecordVos[5]"},{"$ref":"$[0].payOrderRecordVos[6]"}],"paydate":1590632074000,"paytype":"支付宝","rental":23.1,"tax":2.1,"tellphone":"18855532268","username":"yaoby"},{"createtime":1590680414000,"customerName":"zhangshan","customerNum":"123","customerType":"改成这个","debt":1454.75,"deliverydate":1590632074000,"deposit":282.41125,"depositnum":"1234","depositrate":11.5,"email":"1724868042@qq.com","id":11,"isBackMoney":1001.0,"linkmanCellphone":"","linkmanName":"张三","manageUserWeChat":"yaobuyang","name":"yy","orderRemark":"啥呀","orderdate":1590632074000,"ordernum":"529-3","payOrderRecordVos":[{"$ref":"$[0].payOrderRecordVos[0]"},{"$ref":"$[0].payOrderRecordVos[1]"},{"$ref":"$[0].payOrderRecordVos[2]"},{"$ref":"$[0].payOrderRecordVos[3]"},{"$ref":"$[0].payOrderRecordVos[4]"},{"$ref":"$[0].payOrderRecordVos[5]"},{"$ref":"$[0].payOrderRecordVos[6]"}],"paydate":1590632074000,"paytype":"支付宝","rental":2455.75,"tax":223.25,"tellphone":"18855532268","username":"yaoby"},{"createtime":1590680414000,"customerName":"zhangshan","customerNum":"123","customerType":"改成这个","debt":0.0,"deliverydate":1590632074000,"deposit":0.0,"depositnum":"1234","depositrate":11.5,"email":"1724868042@qq.com","id":12,"isBackMoney":0.0,"linkmanCellphone":"","linkmanName":"张三","manageUserWeChat":"yaobuyang","name":"yy","orderRemark":"啥呀","orderdate":1590632074000,"ordernum":"12138","payOrderRecordVos":[{"$ref":"$[0].payOrderRecordVos[0]"},{"$ref":"$[0].payOrderRecordVos[1]"},{"$ref":"$[0].payOrderRecordVos[2]"},{"$ref":"$[0].payOrderRecordVos[3]"},{"$ref":"$[0].payOrderRecordVos[4]"},{"$ref":"$[0].payOrderRecordVos[5]"},{"$ref":"$[0].payOrderRecordVos[6]"}],"paydate":1590632074000,"paytype":"支付宝","rental":0.0,"tax":0.0,"tellphone":"18855532268","username":"yaoby"},{"createtime":1590680414000,"customerName":"zhangshan","customerNum":"123","customerType":"改成这个","debt":0.0,"deliverydate":1590632074000,"deposit":0.0,"depositnum":"1234","depositrate":11.5,"email":"1724868042@qq.com","id":13,"isBackMoney":0.0,"linkmanCellphone":"","linkmanName":"张三","manageUserWeChat":"yaobuyang","name":"yy","orderRemark":"啥呀","orderdate":1590632074000,"ordernum":"12138","payOrderRecordVos":[{"$ref":"$[0].payOrderRecordVos[0]"},{"$ref":"$[0].payOrderRecordVos[1]"},{"$ref":"$[0].payOrderRecordVos[2]"},{"$ref":"$[0].payOrderRecordVos[3]"},{"$ref":"$[0].payOrderRecordVos[4]"},{"$ref":"$[0].payOrderRecordVos[5]"},{"$ref":"$[0].payOrderRecordVos[6]"}],"paydate":1590632074000,"paytype":"支付宝","rental":0.0,"tax":0.0,"tellphone":"18855532268","username":"yaoby"},{"createtime":1590680414000,"customerName":"zhangshan","customerNum":"123","customerType":"改成这个","debt":0.0,"deliverydate":1590632074000,"deposit":0.0,"depositnum":"1234","depositrate":11.5,"email":"1724868042@qq.com","id":14,"isBackMoney":0.0,"linkmanCellphone":"","linkmanName":"张三","manageUserWeChat":"yaobuyang","name":"yy","orderRemark":"啥呀","orderdate":1590632074000,"ordernum":"12138","payOrderRecordVos":[{"$ref":"$[0].payOrderRecordVos[0]"},{"$ref":"$[0].payOrderRecordVos[1]"},{"$ref":"$[0].payOrderRecordVos[2]"},{"$ref":"$[0].payOrderRecordVos[3]"},{"$ref":"$[0].payOrderRecordVos[4]"},{"$ref":"$[0].payOrderRecordVos[5]"},{"$ref":"$[0].payOrderRecordVos[6]"}],"paydate":1590632074000,"paytype":"支付宝","rental":0.0,"tax":0.0,"tellphone":"18855532268","username":"yaoby"}]
+2020-06-05 10:56:54,497 [INFO] com.example.manage.web.SalesController:47 - id为空
+2020-06-05 11:49:57,637 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:49:57,641 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:49:57,648 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2020-06-05 11:49:57,756 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2020-06-05 11:50:12,232 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 10812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 11:50:12,232 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:50:12,823 [WARN] org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.example.manage.mapper]' package. Please check your configuration.
+2020-06-05 11:50:12,897 [WARN] org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.example.manage]' package. Please check your configuration.
+2020-06-05 11:50:12,935 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:50:12,936 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:50:12,937 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2020-06-05 11:50:12,948 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:50:12,949 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:50:12,950 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2020-06-05 11:50:13,124 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$286b87d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:50:13,693 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 11:50:13,695 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 11:50:13,695 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 11:50:13,736 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 11:50:13,736 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 1496 ms
+2020-06-05 11:50:13,894 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-2 - Starting...
+2020-06-05 11:50:14,069 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-2 - Start completed.
+2020-06-05 11:50:14,077 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:50:14,557 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:50:14,596 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:50:14,906 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:50:14,919 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:50:15,102 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+2020-06-05 11:50:15,102 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:50:15,103 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:50:15,104 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-2 - Shutdown initiated...
+2020-06-05 11:50:16,005 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-2 - Shutdown completed.
+2020-06-05 11:50:16,006 [INFO] org.apache.catalina.core.StandardService:173 - Stopping service [Tomcat]
+2020-06-05 11:50:16,014 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-05 11:50:16,031 [ERROR] org.springframework.boot.SpringApplication:858 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.example.manage.DemoApplication.main(DemoApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 24 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:594)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:433)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:627)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:197)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6633f473.CGLIB$sqlSessionFactory$2(<generated>)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6633f473$$FastClassBySpringCGLIB$$c56f004e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6633f473.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:592)
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 46 common frames omitted
+2020-06-05 11:50:21,532 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 10812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 11:50:21,532 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:50:22,273 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:50:22,273 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:50:22,321 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2020-06-05 11:50:22,325 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:50:22,326 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:50:22,347 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2020-06-05 11:50:22,591 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$286b87d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:50:23,020 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 11:50:23,022 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 11:50:23,022 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 11:50:23,086 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 11:50:23,086 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 1551 ms
+2020-06-05 11:50:23,234 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-3 - Starting...
+2020-06-05 11:50:23,397 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-3 - Start completed.
+2020-06-05 11:50:23,422 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:50:23,769 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:50:23,796 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:50:24,454 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:50:24,466 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:50:24,794 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:57 - LiveReload server is running on port 35729
+2020-06-05 11:50:24,837 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204 - Tomcat started on port(s): 10086 (http) with context path ''
+2020-06-05 11:50:25,021 [INFO] com.example.manage.DemoApplication:59 - Started DemoApplication in 3.551 seconds (JVM running for 3367.765)
+2020-06-05 11:50:25,025 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:70 - Condition evaluation unchanged
+2020-06-05 11:50:26,869 [INFO] com.example.demo.DemoApplicationTests:50 - Starting DemoApplicationTests on yao with PID 16096 (started by Ҧ in D:\briup-code\demo)
+2020-06-05 11:50:26,872 [INFO] com.example.demo.DemoApplicationTests:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:50:29,196 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:50:29,202 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:50:29,291 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 73ms. Found 0 repository interfaces.
+2020-06-05 11:50:29,323 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:50:29,343 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:50:29,385 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2020-06-05 11:50:30,265 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d7f4294c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:50:30,853 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-1 - Starting...
+2020-06-05 11:50:31,386 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-1 - Start completed.
+2020-06-05 11:50:31,525 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:50:31,641 [INFO] org.hibernate.Version:46 - HHH000412: Hibernate Core {5.3.9.Final}
+2020-06-05 11:50:31,645 [INFO] org.hibernate.cfg.Environment:213 - HHH000206: hibernate.properties not found
+2020-06-05 11:50:31,979 [INFO] org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-05 11:50:33,326 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:50:33,757 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:50:36,543 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:50:36,655 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:50:38,667 [INFO] com.example.demo.DemoApplicationTests:59 - Started DemoApplicationTests in 12.536 seconds (JVM running for 14.781)
+2020-06-05 11:50:39,324 [INFO] com.example.demo.DemoApplicationTests:63 - ����{"currentPage":1,"pageSize":10,"rows":[{"customerNum":"123","customerType":"�ĳ����","customerTypeId":"1","id":1,"linkmanCellphone":"","linkmanName":"����","name":"zhangshan"},{"customerNum":"1234","customerType":"1321321","customerTypeId":"2","id":2,"name":"lisi"},{"country":"�й�","customerNum":"123","customerType":"1321321","customerTypeId":"2","id":3,"name":"wm1","province":"����"},{"customerNum":"123","customerType":"1321321","customerTypeId":"2","id":4,"name":"wangwu"}],"total":4,"totalPage":1}
+2020-06-05 11:50:39,511 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:50:39,515 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:50:39,536 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2020-06-05 11:50:39,549 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2020-06-05 11:52:38,344 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-05 11:52:38,347 [INFO] org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2020-06-05 11:52:38,358 [INFO] org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 10 ms
+2020-06-05 11:52:38,475 [ERROR] org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/].[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.example.manage.service.PayOrderService.addPayOrder(PayOrderService.java:62)
+	at com.example.manage.service.PayOrderService.addOrder(PayOrderService.java:51)
+	at com.example.manage.web.SalesController.addOrder(SalesController.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-06-05 11:53:08,327 [INFO] com.example.manage.service.PayOrderService:82 - 定金比率：11.5
+2020-06-05 11:53:08,328 [INFO] com.example.manage.service.PayOrderService:91 - 订单：Payorder(id=null, ordernum=12138, orderdate=Thu May 28 10:14:34 CST 2020, manageuserid=1, customerid=1, paytype=支付宝, paydate=Thu May 28 10:14:34 CST 2020, deliverydate=Thu May 28 10:14:34 CST 2020, tax=0.0, depositnum=1234, depositrate=11.5, deposit=0.0, rental=0.0, remark=啥呀, logistics=null, logisticsnum=null, logisticsremark=null, type=1, status=1)
+2020-06-05 11:53:08,395 [INFO] com.example.manage.service.PayOrderService:109 - 单价：0.0
+2020-06-05 11:53:08,395 [INFO] com.example.manage.service.PayOrderService:110 - 税额小计：0.0
+2020-06-05 11:53:08,396 [INFO] com.example.manage.service.PayOrderService:117 - 价格合计：0.0
+2020-06-05 11:54:19,314 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:54:19,317 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:54:19,318 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-3 - Shutdown initiated...
+2020-06-05 11:54:19,326 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-3 - Shutdown completed.
+2020-06-05 11:54:28,826 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 10812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 11:54:28,828 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:54:29,229 [WARN] org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.example.manage.mapper]' package. Please check your configuration.
+2020-06-05 11:54:29,296 [WARN] org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.example.manage]' package. Please check your configuration.
+2020-06-05 11:54:29,348 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:54:29,348 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:54:29,353 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2020-06-05 11:54:29,358 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:54:29,359 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:54:29,360 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2020-06-05 11:54:29,523 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$286b87d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:54:29,826 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 11:54:29,827 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 11:54:29,827 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 11:54:29,880 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 11:54:29,881 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 1050 ms
+2020-06-05 11:54:29,980 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-4 - Starting...
+2020-06-05 11:54:30,166 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-4 - Start completed.
+2020-06-05 11:54:30,172 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:54:30,181 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:54:30,201 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:54:30,364 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:54:30,380 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:54:30,482 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+2020-06-05 11:54:30,482 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:54:30,489 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:54:30,490 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-4 - Shutdown initiated...
+2020-06-05 11:54:30,516 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-4 - Shutdown completed.
+2020-06-05 11:54:30,516 [INFO] org.apache.catalina.core.StandardService:173 - Stopping service [Tomcat]
+2020-06-05 11:54:30,523 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-05 11:54:30,525 [ERROR] org.springframework.boot.SpringApplication:858 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.example.manage.DemoApplication.main(DemoApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 24 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:594)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:433)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:627)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:197)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6633f473.CGLIB$sqlSessionFactory$2(<generated>)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6633f473$$FastClassBySpringCGLIB$$c56f004e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6633f473.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\briup-code\demo\target\classes\mapper\BackflowMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:592)
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.manage.domain.Backflow'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.example.manage.domain.Backflow
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 46 common frames omitted
+2020-06-05 11:54:36,244 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 10812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 11:54:36,245 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:54:36,742 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:54:36,742 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:54:36,759 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2020-06-05 11:54:36,762 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:54:36,762 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:54:36,773 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2020-06-05 11:54:36,839 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$286b87d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:54:37,002 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 11:54:37,003 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 11:54:37,003 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 11:54:37,037 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 11:54:37,037 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 789 ms
+2020-06-05 11:54:37,104 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-5 - Starting...
+2020-06-05 11:54:37,320 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-5 - Start completed.
+2020-06-05 11:54:37,334 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:54:37,374 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:54:37,394 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:54:37,831 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:54:37,845 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:54:38,133 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:57 - LiveReload server is running on port 35729
+2020-06-05 11:54:38,220 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204 - Tomcat started on port(s): 10086 (http) with context path ''
+2020-06-05 11:54:38,221 [INFO] com.example.manage.DemoApplication:59 - Started DemoApplication in 2.028 seconds (JVM running for 3620.965)
+2020-06-05 11:54:38,228 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:70 - Condition evaluation unchanged
+2020-06-05 11:54:40,498 [INFO] com.example.demo.DemoApplicationTests:50 - Starting DemoApplicationTests on yao with PID 12552 (started by Ҧ in D:\briup-code\demo)
+2020-06-05 11:54:40,500 [INFO] com.example.demo.DemoApplicationTests:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:54:42,494 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:54:42,501 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:54:42,642 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 103ms. Found 0 repository interfaces.
+2020-06-05 11:54:42,673 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:54:42,675 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:54:42,718 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2020-06-05 11:54:43,585 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2db93106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:54:44,009 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-1 - Starting...
+2020-06-05 11:54:44,622 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-1 - Start completed.
+2020-06-05 11:54:44,756 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:54:44,855 [INFO] org.hibernate.Version:46 - HHH000412: Hibernate Core {5.3.9.Final}
+2020-06-05 11:54:44,857 [INFO] org.hibernate.cfg.Environment:213 - HHH000206: hibernate.properties not found
+2020-06-05 11:54:45,189 [INFO] org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-05 11:54:46,543 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:54:46,899 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:54:49,590 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:54:49,700 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:54:51,530 [INFO] com.example.demo.DemoApplicationTests:59 - Started DemoApplicationTests in 11.715 seconds (JVM running for 13.174)
+2020-06-05 11:54:52,093 [INFO] com.example.demo.DemoApplicationTests:63 - ����{"currentPage":1,"pageSize":10,"rows":[{"customerNum":"123","customerType":"�ĳ����","customerTypeId":"1","id":1,"linkmanCellphone":"","linkmanName":"����","name":"zhangshan"},{"customerNum":"1234","customerType":"1321321","customerTypeId":"2","id":2,"name":"lisi"},{"country":"�й�","customerNum":"123","customerType":"1321321","customerTypeId":"2","id":3,"name":"wm1","province":"����"},{"customerNum":"123","customerType":"1321321","customerTypeId":"2","id":4,"name":"wangwu"}],"total":4,"totalPage":1}
+2020-06-05 11:54:52,256 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:54:52,258 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:54:52,262 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2020-06-05 11:54:52,271 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2020-06-05 11:55:10,167 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:55:10,171 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:55:10,172 [INFO] com.zaxxer.hikari.HikariDataSource:350 - HikariPool-5 - Shutdown initiated...
+2020-06-05 11:55:10,183 [INFO] com.zaxxer.hikari.HikariDataSource:352 - HikariPool-5 - Shutdown completed.
+2020-06-05 11:55:12,511 [INFO] com.example.manage.DemoApplication:50 - Starting DemoApplication on yao with PID 10812 (D:\briup-code\demo\target\classes started by 姚 in D:\briup-code\demo)
+2020-06-05 11:55:12,512 [INFO] com.example.manage.DemoApplication:675 - No active profile set, falling back to default profiles: default
+2020-06-05 11:55:13,432 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:55:13,432 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:55:13,511 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 79ms. Found 0 repository interfaces.
+2020-06-05 11:55:13,516 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-05 11:55:13,516 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-05 11:55:13,549 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 33ms. Found 0 repository interfaces.
+2020-06-05 11:55:13,692 [INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$286b87d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-05 11:55:13,959 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 10086 (http)
+2020-06-05 11:55:13,961 [INFO] org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-06-05 11:55:13,962 [INFO] org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-05 11:55:14,001 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-06-05 11:55:14,001 [INFO] org.springframework.web.context.ContextLoader:296 - Root WebApplicationContext: initialization completed in 1484 ms
+2020-06-05 11:55:14,079 [INFO] com.zaxxer.hikari.HikariDataSource:110 - HikariPool-6 - Starting...
+2020-06-05 11:55:14,255 [INFO] com.zaxxer.hikari.HikariDataSource:123 - HikariPool-6 - Start completed.
+2020-06-05 11:55:14,276 [INFO] org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-05 11:55:14,325 [INFO] org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-05 11:55:14,342 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-05 11:55:14,814 [INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-05 11:55:14,821 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:237 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-05 11:55:14,956 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:57 - LiveReload server is running on port 35729
+2020-06-05 11:55:14,983 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204 - Tomcat started on port(s): 10086 (http) with context path ''
+2020-06-05 11:55:14,984 [INFO] com.example.manage.DemoApplication:59 - Started DemoApplication in 2.604 seconds (JVM running for 3657.728)
+2020-06-05 11:55:14,988 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:70 - Condition evaluation unchanged
+2020-06-05 13:01:29,239 [WARN] com.zaxxer.hikari.pool.HikariPool:766 - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=29m44s768ms858µs500ns).

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.PurchaserecordMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Purchaserecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="rawMaterialsId" jdbcType="BIGINT" property="rawmaterialsid" />
+    <result column="purchaseId" jdbcType="BIGINT" property="purchaseid" />
+    <result column="unitPrice" jdbcType="VARCHAR" property="unitprice" />
+    <result column="taxPoint" jdbcType="VARCHAR" property="taxpoint" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="taxSubtotal" jdbcType="VARCHAR" property="taxsubtotal" />
+    <result column="totalMoney" jdbcType="VARCHAR" property="totalmoney" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, rawMaterialsId, purchaseId, unitPrice, taxPoint, `count`, taxSubtotal, totalMoney, 
+    `status`
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.PurchaserecordExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from purchaserecord
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from purchaserecord
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from purchaserecord
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.PurchaserecordExample">
+    delete from purchaserecord
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Purchaserecord" useGeneratedKeys="true">
+    insert into purchaserecord (rawMaterialsId, purchaseId, unitPrice, 
+      taxPoint, `count`, taxSubtotal, 
+      totalMoney, `status`)
+    values (#{rawmaterialsid,jdbcType=BIGINT}, #{purchaseid,jdbcType=BIGINT}, #{unitprice,jdbcType=VARCHAR}, 
+      #{taxpoint,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, #{taxsubtotal,jdbcType=VARCHAR}, 
+      #{totalmoney,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Purchaserecord" useGeneratedKeys="true">
+    insert into purchaserecord
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rawmaterialsid != null">
+        rawMaterialsId,
+      </if>
+      <if test="purchaseid != null">
+        purchaseId,
+      </if>
+      <if test="unitprice != null">
+        unitPrice,
+      </if>
+      <if test="taxpoint != null">
+        taxPoint,
+      </if>
+      <if test="count != null">
+        `count`,
+      </if>
+      <if test="taxsubtotal != null">
+        taxSubtotal,
+      </if>
+      <if test="totalmoney != null">
+        totalMoney,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rawmaterialsid != null">
+        #{rawmaterialsid,jdbcType=BIGINT},
+      </if>
+      <if test="purchaseid != null">
+        #{purchaseid,jdbcType=BIGINT},
+      </if>
+      <if test="unitprice != null">
+        #{unitprice,jdbcType=VARCHAR},
+      </if>
+      <if test="taxpoint != null">
+        #{taxpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="taxsubtotal != null">
+        #{taxsubtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmoney != null">
+        #{totalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.PurchaserecordExample" resultType="java.lang.Long">
+    select count(*) from purchaserecord
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update purchaserecord
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.rawmaterialsid != null">
+        rawMaterialsId = #{record.rawmaterialsid,jdbcType=BIGINT},
+      </if>
+      <if test="record.purchaseid != null">
+        purchaseId = #{record.purchaseid,jdbcType=BIGINT},
+      </if>
+      <if test="record.unitprice != null">
+        unitPrice = #{record.unitprice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taxpoint != null">
+        taxPoint = #{record.taxpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.count != null">
+        `count` = #{record.count,jdbcType=INTEGER},
+      </if>
+      <if test="record.taxsubtotal != null">
+        taxSubtotal = #{record.taxsubtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalmoney != null">
+        totalMoney = #{record.totalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update purchaserecord
+    set id = #{record.id,jdbcType=BIGINT},
+      rawMaterialsId = #{record.rawmaterialsid,jdbcType=BIGINT},
+      purchaseId = #{record.purchaseid,jdbcType=BIGINT},
+      unitPrice = #{record.unitprice,jdbcType=VARCHAR},
+      taxPoint = #{record.taxpoint,jdbcType=VARCHAR},
+      `count` = #{record.count,jdbcType=INTEGER},
+      taxSubtotal = #{record.taxsubtotal,jdbcType=VARCHAR},
+      totalMoney = #{record.totalmoney,jdbcType=VARCHAR},
+      `status` = #{record.status,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Purchaserecord">
+    update purchaserecord
+    <set>
+      <if test="rawmaterialsid != null">
+        rawMaterialsId = #{rawmaterialsid,jdbcType=BIGINT},
+      </if>
+      <if test="purchaseid != null">
+        purchaseId = #{purchaseid,jdbcType=BIGINT},
+      </if>
+      <if test="unitprice != null">
+        unitPrice = #{unitprice,jdbcType=VARCHAR},
+      </if>
+      <if test="taxpoint != null">
+        taxPoint = #{taxpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        `count` = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="taxsubtotal != null">
+        taxSubtotal = #{taxsubtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmoney != null">
+        totalMoney = #{totalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Purchaserecord">
+    update purchaserecord
+    set rawMaterialsId = #{rawmaterialsid,jdbcType=BIGINT},
+      purchaseId = #{purchaseid,jdbcType=BIGINT},
+      unitPrice = #{unitprice,jdbcType=VARCHAR},
+      taxPoint = #{taxpoint,jdbcType=VARCHAR},
+      `count` = #{count,jdbcType=INTEGER},
+      taxSubtotal = #{taxsubtotal,jdbcType=VARCHAR},
+      totalMoney = #{totalmoney,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findPurchaseRecordByRawMaterialsRecordId" parameterType="java.lang.Long" resultType="com.example.manage.domain.Purchaserecord">
+    select *
+    from purchaserecord p
+    where p.purchaseId =#{purchaseId}
+  </select>
+    <select id="findPurchaseRecordByPurchaseIdAndFinshed" parameterType="java.lang.Long" resultType="com.example.manage.domain.Purchaserecord">
+    <bind name="PRODUCTION_STATUS_FINISHED" value="@com.example.manage.constant.ConstantsForDomain@PRODUCTION_STATUS_FINISHED"/>
+    select *
+    from purchaserecord p
+    where p.purchaseId =#{purchaseId} AND p.status=#{PRODUCTION_STATUS_FINISHED}
+    </select>
+</mapper>

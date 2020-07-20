@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.PayorderMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Payorder">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="orderNum" jdbcType="VARCHAR" property="ordernum" />
+    <result column="orderDate" jdbcType="TIMESTAMP" property="orderdate" />
+    <result column="manageUserId" jdbcType="BIGINT" property="manageuserid" />
+    <result column="customerId" jdbcType="BIGINT" property="customerid" />
+    <result column="payType" jdbcType="VARCHAR" property="paytype" />
+    <result column="payDate" jdbcType="TIMESTAMP" property="paydate" />
+    <result column="deliveryDate" jdbcType="TIMESTAMP" property="deliverydate" />
+    <result column="tax" jdbcType="VARCHAR" property="tax" />
+    <result column="depositNum" jdbcType="VARCHAR" property="depositnum" />
+    <result column="depositRate" jdbcType="VARCHAR" property="depositrate" />
+    <result column="deposit" jdbcType="VARCHAR" property="deposit" />
+    <result column="rental" jdbcType="VARCHAR" property="rental" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="logistics" jdbcType="VARCHAR" property="logistics" />
+    <result column="logisticsNum" jdbcType="VARCHAR" property="logisticsnum" />
+    <result column="logisticsRemark" jdbcType="VARCHAR" property="logisticsremark" />
+    <result column="detection" jdbcType="VARCHAR" property="detection" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, orderNum, orderDate, manageUserId, customerId, payType, payDate, deliveryDate, 
+    tax, depositNum, depositRate, deposit, rental, remark, logistics, logisticsNum, logisticsRemark, 
+    detection, `type`, `status`
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.PayorderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from payorder
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from payorder
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from payorder
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.PayorderExample">
+    delete from payorder
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Payorder" useGeneratedKeys="true">
+    insert into payorder (orderNum, orderDate, manageUserId, 
+      customerId, payType, payDate, 
+      deliveryDate, tax, depositNum, 
+      depositRate, deposit, rental, 
+      remark, logistics, logisticsNum, 
+      logisticsRemark, detection, `type`, 
+      `status`)
+    values (#{ordernum,jdbcType=VARCHAR}, #{orderdate,jdbcType=TIMESTAMP}, #{manageuserid,jdbcType=BIGINT}, 
+      #{customerid,jdbcType=BIGINT}, #{paytype,jdbcType=VARCHAR}, #{paydate,jdbcType=TIMESTAMP}, 
+      #{deliverydate,jdbcType=TIMESTAMP}, #{tax,jdbcType=VARCHAR}, #{depositnum,jdbcType=VARCHAR}, 
+      #{depositrate,jdbcType=VARCHAR}, #{deposit,jdbcType=VARCHAR}, #{rental,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{logistics,jdbcType=VARCHAR}, #{logisticsnum,jdbcType=VARCHAR}, 
+      #{logisticsremark,jdbcType=VARCHAR}, #{detection,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Payorder" useGeneratedKeys="true">
+    insert into payorder
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="orderdate != null">
+        orderDate,
+      </if>
+      <if test="manageuserid != null">
+        manageUserId,
+      </if>
+      <if test="customerid != null">
+        customerId,
+      </if>
+      <if test="paytype != null">
+        payType,
+      </if>
+      <if test="paydate != null">
+        payDate,
+      </if>
+      <if test="deliverydate != null">
+        deliveryDate,
+      </if>
+      <if test="tax != null">
+        tax,
+      </if>
+      <if test="depositnum != null">
+        depositNum,
+      </if>
+      <if test="depositrate != null">
+        depositRate,
+      </if>
+      <if test="deposit != null">
+        deposit,
+      </if>
+      <if test="rental != null">
+        rental,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="logistics != null">
+        logistics,
+      </if>
+      <if test="logisticsnum != null">
+        logisticsNum,
+      </if>
+      <if test="logisticsremark != null">
+        logisticsRemark,
+      </if>
+      <if test="detection != null">
+        detection,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=VARCHAR},
+      </if>
+      <if test="orderdate != null">
+        #{orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="manageuserid != null">
+        #{manageuserid,jdbcType=BIGINT},
+      </if>
+      <if test="customerid != null">
+        #{customerid,jdbcType=BIGINT},
+      </if>
+      <if test="paytype != null">
+        #{paytype,jdbcType=VARCHAR},
+      </if>
+      <if test="paydate != null">
+        #{paydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deliverydate != null">
+        #{deliverydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tax != null">
+        #{tax,jdbcType=VARCHAR},
+      </if>
+      <if test="depositnum != null">
+        #{depositnum,jdbcType=VARCHAR},
+      </if>
+      <if test="depositrate != null">
+        #{depositrate,jdbcType=VARCHAR},
+      </if>
+      <if test="deposit != null">
+        #{deposit,jdbcType=VARCHAR},
+      </if>
+      <if test="rental != null">
+        #{rental,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="logistics != null">
+        #{logistics,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsnum != null">
+        #{logisticsnum,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsremark != null">
+        #{logisticsremark,jdbcType=VARCHAR},
+      </if>
+      <if test="detection != null">
+        #{detection,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.PayorderExample" resultType="java.lang.Long">
+    select count(*) from payorder
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update payorder
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.ordernum != null">
+        orderNum = #{record.ordernum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orderdate != null">
+        orderDate = #{record.orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.manageuserid != null">
+        manageUserId = #{record.manageuserid,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerid != null">
+        customerId = #{record.customerid,jdbcType=BIGINT},
+      </if>
+      <if test="record.paytype != null">
+        payType = #{record.paytype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paydate != null">
+        payDate = #{record.paydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deliverydate != null">
+        deliveryDate = #{record.deliverydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tax != null">
+        tax = #{record.tax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.depositnum != null">
+        depositNum = #{record.depositnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.depositrate != null">
+        depositRate = #{record.depositrate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deposit != null">
+        deposit = #{record.deposit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rental != null">
+        rental = #{record.rental,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logistics != null">
+        logistics = #{record.logistics,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logisticsnum != null">
+        logisticsNum = #{record.logisticsnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logisticsremark != null">
+        logisticsRemark = #{record.logisticsremark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.detection != null">
+        detection = #{record.detection,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        `type` = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update payorder
+    set id = #{record.id,jdbcType=BIGINT},
+      orderNum = #{record.ordernum,jdbcType=VARCHAR},
+      orderDate = #{record.orderdate,jdbcType=TIMESTAMP},
+      manageUserId = #{record.manageuserid,jdbcType=BIGINT},
+      customerId = #{record.customerid,jdbcType=BIGINT},
+      payType = #{record.paytype,jdbcType=VARCHAR},
+      payDate = #{record.paydate,jdbcType=TIMESTAMP},
+      deliveryDate = #{record.deliverydate,jdbcType=TIMESTAMP},
+      tax = #{record.tax,jdbcType=VARCHAR},
+      depositNum = #{record.depositnum,jdbcType=VARCHAR},
+      depositRate = #{record.depositrate,jdbcType=VARCHAR},
+      deposit = #{record.deposit,jdbcType=VARCHAR},
+      rental = #{record.rental,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      logistics = #{record.logistics,jdbcType=VARCHAR},
+      logisticsNum = #{record.logisticsnum,jdbcType=VARCHAR},
+      logisticsRemark = #{record.logisticsremark,jdbcType=VARCHAR},
+      detection = #{record.detection,jdbcType=VARCHAR},
+      `type` = #{record.type,jdbcType=INTEGER},
+      `status` = #{record.status,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Payorder">
+    update payorder
+    <set>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=VARCHAR},
+      </if>
+      <if test="orderdate != null">
+        orderDate = #{orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="manageuserid != null">
+        manageUserId = #{manageuserid,jdbcType=BIGINT},
+      </if>
+      <if test="customerid != null">
+        customerId = #{customerid,jdbcType=BIGINT},
+      </if>
+      <if test="paytype != null">
+        payType = #{paytype,jdbcType=VARCHAR},
+      </if>
+      <if test="paydate != null">
+        payDate = #{paydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deliverydate != null">
+        deliveryDate = #{deliverydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tax != null">
+        tax = #{tax,jdbcType=VARCHAR},
+      </if>
+      <if test="depositnum != null">
+        depositNum = #{depositnum,jdbcType=VARCHAR},
+      </if>
+      <if test="depositrate != null">
+        depositRate = #{depositrate,jdbcType=VARCHAR},
+      </if>
+      <if test="deposit != null">
+        deposit = #{deposit,jdbcType=VARCHAR},
+      </if>
+      <if test="rental != null">
+        rental = #{rental,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="logistics != null">
+        logistics = #{logistics,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsnum != null">
+        logisticsNum = #{logisticsnum,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsremark != null">
+        logisticsRemark = #{logisticsremark,jdbcType=VARCHAR},
+      </if>
+      <if test="detection != null">
+        detection = #{detection,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Payorder">
+    update payorder
+    set orderNum = #{ordernum,jdbcType=VARCHAR},
+      orderDate = #{orderdate,jdbcType=TIMESTAMP},
+      manageUserId = #{manageuserid,jdbcType=BIGINT},
+      customerId = #{customerid,jdbcType=BIGINT},
+      payType = #{paytype,jdbcType=VARCHAR},
+      payDate = #{paydate,jdbcType=TIMESTAMP},
+      deliveryDate = #{deliverydate,jdbcType=TIMESTAMP},
+      tax = #{tax,jdbcType=VARCHAR},
+      depositNum = #{depositnum,jdbcType=VARCHAR},
+      depositRate = #{depositrate,jdbcType=VARCHAR},
+      deposit = #{deposit,jdbcType=VARCHAR},
+      rental = #{rental,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      logistics = #{logistics,jdbcType=VARCHAR},
+      logisticsNum = #{logisticsnum,jdbcType=VARCHAR},
+      logisticsRemark = #{logisticsremark,jdbcType=VARCHAR},
+      detection = #{detection,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=INTEGER},
+      `status` = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+    <select id="findCountByStatus" resultType="java.lang.Long">
+      <bind name="CUSTOMER_STATUS_DELETE" value="@com.example.manage.constant.ConstantsForDomain@CUSTOMER_STATUS_DELETE" />
+      select count(*)
+      from payorder p
+      where p.status != #{CUSTOMER_STATUS_DELETE}
+    </select>
+  <select id="findPageByType" parameterType="com.example.manage.util.PageRequest" resultType="com.example.manage.domain.Payorder">
+    <bind name="CUSTOMER_STATUS_DELETE" value="@com.example.manage.constant.ConstantsForDomain@CUSTOMER_STATUS_DELETE" />
+<!--    &lt;bind name="ORDER_TYPE_BUY" value="@com.example.manage.constant.ConstantsForDomain@ORDER_TYPE_BUY" /&gt;-->
+    select *
+    from payorder p
+    where p.status != #{CUSTOMER_STATUS_DELETE} and p.TYPE =#{type}
+    limit #{pageRequest.offset}, #{pageRequest.pageSize}
+  </select>
+  <select id="findOrderFuzzyQuery" parameterType="java.lang.String" resultType="com.example.manage.domain.other.OrderFuzzyQuery">
+    select po.id id, po.orderNum orderNum, c.linkman_name customerName, c.linkman_cellphone customerTellphone, m.`name` saleName
+    from payorder po left JOIN customer c ON po.customerId = c.id INNER JOIN manageuser m ON m.id = po.manageUserId
+    WHERE po.orderNum LIKE CONCAT("%",#{key},"%") or c.`name` LIKE  CONCAT("%",#{key},"%") or c.linkman_cellphone LIKE  CONCAT("%",#{key},"%") AND po.type =#{type}
+  </select>
+  <select id="findOrderCustomerById" parameterType="java.lang.Long" resultType="com.example.manage.domain.other.OrderFuzzyQuery">
+    select po.id id, po.orderNum orderNum, c.linkman_name customerName, c.linkman_cellphone customerTellphone, m.`name` saleName
+    from payorder po left JOIN customer c ON po.customerId = c.id INNER JOIN manageuser m ON m.id = po.manageUserId
+    WHERE po.id =#{id}
+  </select>
+  <select id="findByIdAndType" resultType="com.example.manage.domain.Payorder">
+    select *
+    from payorder p
+    where p.id =#{id} and p.type =#{type}
+  </select>
+</mapper>

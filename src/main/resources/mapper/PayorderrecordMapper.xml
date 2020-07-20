@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.PayorderrecordMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Payorderrecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="payOrderId" jdbcType="BIGINT" property="payorderid" />
+    <result column="productId" jdbcType="BIGINT" property="productid" />
+    <result column="modelNo" jdbcType="VARCHAR" property="modelno" />
+    <result column="unitPrice" jdbcType="VARCHAR" property="unitprice" />
+    <result column="taxPoint" jdbcType="VARCHAR" property="taxpoint" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="discount" jdbcType="VARCHAR" property="discount" />
+    <result column="taxSubtotal" jdbcType="VARCHAR" property="taxsubtotal" />
+    <result column="totalMoney" jdbcType="VARCHAR" property="totalmoney" />
+    <result column="weightTolerance" jdbcType="VARCHAR" property="weighttolerance" />
+    <result column="changeColor" jdbcType="VARCHAR" property="changecolor" />
+    <result column="larghezza" jdbcType="VARCHAR" property="larghezza" />
+    <result column="weight" jdbcType="VARCHAR" property="weight" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, payOrderId, productId, modelNo, unitPrice, taxPoint, `count`, discount, taxSubtotal, 
+    totalMoney, weightTolerance, changeColor, larghezza, weight
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.PayorderrecordExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from payorderrecord
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from payorderrecord
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from payorderrecord
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.PayorderrecordExample">
+    delete from payorderrecord
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Payorderrecord" useGeneratedKeys="true">
+    insert into payorderrecord (payOrderId, productId, modelNo, 
+      unitPrice, taxPoint, `count`, 
+      discount, taxSubtotal, totalMoney, 
+      weightTolerance, changeColor, larghezza, 
+      weight)
+    values (#{payorderid,jdbcType=BIGINT}, #{productid,jdbcType=BIGINT}, #{modelno,jdbcType=VARCHAR}, 
+      #{unitprice,jdbcType=VARCHAR}, #{taxpoint,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, 
+      #{discount,jdbcType=VARCHAR}, #{taxsubtotal,jdbcType=VARCHAR}, #{totalmoney,jdbcType=VARCHAR}, 
+      #{weighttolerance,jdbcType=VARCHAR}, #{changecolor,jdbcType=VARCHAR}, #{larghezza,jdbcType=VARCHAR}, 
+      #{weight,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Payorderrecord" useGeneratedKeys="true">
+    insert into payorderrecord
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="payorderid != null">
+        payOrderId,
+      </if>
+      <if test="productid != null">
+        productId,
+      </if>
+      <if test="modelno != null">
+        modelNo,
+      </if>
+      <if test="unitprice != null">
+        unitPrice,
+      </if>
+      <if test="taxpoint != null">
+        taxPoint,
+      </if>
+      <if test="count != null">
+        `count`,
+      </if>
+      <if test="discount != null">
+        discount,
+      </if>
+      <if test="taxsubtotal != null">
+        taxSubtotal,
+      </if>
+      <if test="totalmoney != null">
+        totalMoney,
+      </if>
+      <if test="weighttolerance != null">
+        weightTolerance,
+      </if>
+      <if test="changecolor != null">
+        changeColor,
+      </if>
+      <if test="larghezza != null">
+        larghezza,
+      </if>
+      <if test="weight != null">
+        weight,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="payorderid != null">
+        #{payorderid,jdbcType=BIGINT},
+      </if>
+      <if test="productid != null">
+        #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="modelno != null">
+        #{modelno,jdbcType=VARCHAR},
+      </if>
+      <if test="unitprice != null">
+        #{unitprice,jdbcType=VARCHAR},
+      </if>
+      <if test="taxpoint != null">
+        #{taxpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="discount != null">
+        #{discount,jdbcType=VARCHAR},
+      </if>
+      <if test="taxsubtotal != null">
+        #{taxsubtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmoney != null">
+        #{totalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="weighttolerance != null">
+        #{weighttolerance,jdbcType=VARCHAR},
+      </if>
+      <if test="changecolor != null">
+        #{changecolor,jdbcType=VARCHAR},
+      </if>
+      <if test="larghezza != null">
+        #{larghezza,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null">
+        #{weight,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.PayorderrecordExample" resultType="java.lang.Long">
+    select count(*) from payorderrecord
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update payorderrecord
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.payorderid != null">
+        payOrderId = #{record.payorderid,jdbcType=BIGINT},
+      </if>
+      <if test="record.productid != null">
+        productId = #{record.productid,jdbcType=BIGINT},
+      </if>
+      <if test="record.modelno != null">
+        modelNo = #{record.modelno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitprice != null">
+        unitPrice = #{record.unitprice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taxpoint != null">
+        taxPoint = #{record.taxpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.count != null">
+        `count` = #{record.count,jdbcType=INTEGER},
+      </if>
+      <if test="record.discount != null">
+        discount = #{record.discount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taxsubtotal != null">
+        taxSubtotal = #{record.taxsubtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalmoney != null">
+        totalMoney = #{record.totalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weighttolerance != null">
+        weightTolerance = #{record.weighttolerance,jdbcType=VARCHAR},
+      </if>
+      <if test="record.changecolor != null">
+        changeColor = #{record.changecolor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.larghezza != null">
+        larghezza = #{record.larghezza,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weight != null">
+        weight = #{record.weight,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update payorderrecord
+    set id = #{record.id,jdbcType=BIGINT},
+      payOrderId = #{record.payorderid,jdbcType=BIGINT},
+      productId = #{record.productid,jdbcType=BIGINT},
+      modelNo = #{record.modelno,jdbcType=VARCHAR},
+      unitPrice = #{record.unitprice,jdbcType=VARCHAR},
+      taxPoint = #{record.taxpoint,jdbcType=VARCHAR},
+      `count` = #{record.count,jdbcType=INTEGER},
+      discount = #{record.discount,jdbcType=VARCHAR},
+      taxSubtotal = #{record.taxsubtotal,jdbcType=VARCHAR},
+      totalMoney = #{record.totalmoney,jdbcType=VARCHAR},
+      weightTolerance = #{record.weighttolerance,jdbcType=VARCHAR},
+      changeColor = #{record.changecolor,jdbcType=VARCHAR},
+      larghezza = #{record.larghezza,jdbcType=VARCHAR},
+      weight = #{record.weight,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Payorderrecord">
+    update payorderrecord
+    <set>
+      <if test="payorderid != null">
+        payOrderId = #{payorderid,jdbcType=BIGINT},
+      </if>
+      <if test="productid != null">
+        productId = #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="modelno != null">
+        modelNo = #{modelno,jdbcType=VARCHAR},
+      </if>
+      <if test="unitprice != null">
+        unitPrice = #{unitprice,jdbcType=VARCHAR},
+      </if>
+      <if test="taxpoint != null">
+        taxPoint = #{taxpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        `count` = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="discount != null">
+        discount = #{discount,jdbcType=VARCHAR},
+      </if>
+      <if test="taxsubtotal != null">
+        taxSubtotal = #{taxsubtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmoney != null">
+        totalMoney = #{totalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="weighttolerance != null">
+        weightTolerance = #{weighttolerance,jdbcType=VARCHAR},
+      </if>
+      <if test="changecolor != null">
+        changeColor = #{changecolor,jdbcType=VARCHAR},
+      </if>
+      <if test="larghezza != null">
+        larghezza = #{larghezza,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Payorderrecord">
+    update payorderrecord
+    set payOrderId = #{payorderid,jdbcType=BIGINT},
+      productId = #{productid,jdbcType=BIGINT},
+      modelNo = #{modelno,jdbcType=VARCHAR},
+      unitPrice = #{unitprice,jdbcType=VARCHAR},
+      taxPoint = #{taxpoint,jdbcType=VARCHAR},
+      `count` = #{count,jdbcType=INTEGER},
+      discount = #{discount,jdbcType=VARCHAR},
+      taxSubtotal = #{taxsubtotal,jdbcType=VARCHAR},
+      totalMoney = #{totalmoney,jdbcType=VARCHAR},
+      weightTolerance = #{weighttolerance,jdbcType=VARCHAR},
+      changeColor = #{changecolor,jdbcType=VARCHAR},
+      larghezza = #{larghezza,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="findListByPayOrderId" parameterType="java.lang.Long" resultType="com.example.manage.domain.Payorderrecord">
+          select *
+          from payorderrecord p
+          where p.payOrderId =#{payOrderId}
+  </select>
+</mapper>

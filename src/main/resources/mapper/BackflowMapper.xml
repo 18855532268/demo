@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.BackflowMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Backflow">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="payOrderId" jdbcType="BIGINT" property="payorderid" />
+    <result column="money" jdbcType="VARCHAR" property="money" />
+    <result column="date" jdbcType="TIMESTAMP" property="date" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="isInvoice" jdbcType="INTEGER" property="isinvoice" />
+    <result column="invoiceImgUrl" jdbcType="VARCHAR" property="invoiceimgurl" />
+    <result column="invoiceType" jdbcType="VARCHAR" property="invoicetype" />
+    <result column="invoiceTitle" jdbcType="VARCHAR" property="invoicetitle" />
+    <result column="invoiceMoney" jdbcType="VARCHAR" property="invoicemoney" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, payOrderId, money, `date`, `type`, remark, isInvoice, invoiceImgUrl, invoiceType, 
+    invoiceTitle, invoiceMoney, `status`
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.BackflowExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from backflow
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from backflow
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from backflow
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.BackflowExample">
+    delete from backflow
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Backflow" useGeneratedKeys="true">
+    insert into backflow (payOrderId, money, `date`, 
+      `type`, remark, isInvoice, 
+      invoiceImgUrl, invoiceType, invoiceTitle, 
+      invoiceMoney, `status`)
+    values (#{payorderid,jdbcType=BIGINT}, #{money,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, 
+      #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{isinvoice,jdbcType=INTEGER}, 
+      #{invoiceimgurl,jdbcType=VARCHAR}, #{invoicetype,jdbcType=VARCHAR}, #{invoicetitle,jdbcType=VARCHAR}, 
+      #{invoicemoney,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Backflow" useGeneratedKeys="true">
+    insert into backflow
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="payorderid != null">
+        payOrderId,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+      <if test="date != null">
+        `date`,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="isinvoice != null">
+        isInvoice,
+      </if>
+      <if test="invoiceimgurl != null">
+        invoiceImgUrl,
+      </if>
+      <if test="invoicetype != null">
+        invoiceType,
+      </if>
+      <if test="invoicetitle != null">
+        invoiceTitle,
+      </if>
+      <if test="invoicemoney != null">
+        invoiceMoney,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="payorderid != null">
+        #{payorderid,jdbcType=BIGINT},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isinvoice != null">
+        #{isinvoice,jdbcType=INTEGER},
+      </if>
+      <if test="invoiceimgurl != null">
+        #{invoiceimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="invoicetype != null">
+        #{invoicetype,jdbcType=VARCHAR},
+      </if>
+      <if test="invoicetitle != null">
+        #{invoicetitle,jdbcType=VARCHAR},
+      </if>
+      <if test="invoicemoney != null">
+        #{invoicemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.BackflowExample" resultType="java.lang.Long">
+    select count(*) from backflow
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update backflow
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.payorderid != null">
+        payOrderId = #{record.payorderid,jdbcType=BIGINT},
+      </if>
+      <if test="record.money != null">
+        money = #{record.money,jdbcType=VARCHAR},
+      </if>
+      <if test="record.date != null">
+        `date` = #{record.date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.type != null">
+        `type` = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isinvoice != null">
+        isInvoice = #{record.isinvoice,jdbcType=INTEGER},
+      </if>
+      <if test="record.invoiceimgurl != null">
+        invoiceImgUrl = #{record.invoiceimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoicetype != null">
+        invoiceType = #{record.invoicetype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoicetitle != null">
+        invoiceTitle = #{record.invoicetitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.invoicemoney != null">
+        invoiceMoney = #{record.invoicemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update backflow
+    set id = #{record.id,jdbcType=BIGINT},
+      payOrderId = #{record.payorderid,jdbcType=BIGINT},
+      money = #{record.money,jdbcType=VARCHAR},
+      `date` = #{record.date,jdbcType=TIMESTAMP},
+      `type` = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      isInvoice = #{record.isinvoice,jdbcType=INTEGER},
+      invoiceImgUrl = #{record.invoiceimgurl,jdbcType=VARCHAR},
+      invoiceType = #{record.invoicetype,jdbcType=VARCHAR},
+      invoiceTitle = #{record.invoicetitle,jdbcType=VARCHAR},
+      invoiceMoney = #{record.invoicemoney,jdbcType=VARCHAR},
+      `status` = #{record.status,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Backflow">
+    update backflow
+    <set>
+      <if test="payorderid != null">
+        payOrderId = #{payorderid,jdbcType=BIGINT},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        `date` = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isinvoice != null">
+        isInvoice = #{isinvoice,jdbcType=INTEGER},
+      </if>
+      <if test="invoiceimgurl != null">
+        invoiceImgUrl = #{invoiceimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="invoicetype != null">
+        invoiceType = #{invoicetype,jdbcType=VARCHAR},
+      </if>
+      <if test="invoicetitle != null">
+        invoiceTitle = #{invoicetitle,jdbcType=VARCHAR},
+      </if>
+      <if test="invoicemoney != null">
+        invoiceMoney = #{invoicemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Backflow">
+    update backflow
+    set payOrderId = #{payorderid,jdbcType=BIGINT},
+      money = #{money,jdbcType=VARCHAR},
+      `date` = #{date,jdbcType=TIMESTAMP},
+      `type` = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      isInvoice = #{isinvoice,jdbcType=INTEGER},
+      invoiceImgUrl = #{invoiceimgurl,jdbcType=VARCHAR},
+      invoiceType = #{invoicetype,jdbcType=VARCHAR},
+      invoiceTitle = #{invoicetitle,jdbcType=VARCHAR},
+      invoiceMoney = #{invoicemoney,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="findBackFlowPageCount" resultType="java.lang.Long">
+    <bind name="DELETE" value="@com.example.manage.constant.ConstantsForDomain@DELETE" />
+        select count(*)
+        from backflow b
+        where b.status !=#{DELETE}
+  </select>
+  <select id="findBackFlowPage" parameterType="com.example.manage.util.PageRequest" resultType="com.example.manage.domain.Backflow">
+    <bind name="DELETE" value="@com.example.manage.constant.ConstantsForDomain@DELETE" />
+    select *
+    from backflow b
+    where b.status !=#{DELETE}
+    limit #{pageRequest.offset}, #{pageRequest.pageSize}
+  </select>
+  <select id="findBackFlowByPayOrderId" resultType="com.example.manage.domain.Backflow"
+          parameterType="java.lang.Long">
+    <bind name="DELETE" value="@com.example.manage.constant.ConstantsForDomain@DELETE" />
+    select *
+    from backflow b
+    where b.payOrderId =#{payOrderId} and b.status !=#{DELETE}
+  </select>
+</mapper>

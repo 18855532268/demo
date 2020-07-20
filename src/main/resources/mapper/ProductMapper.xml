@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.ProductMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Product">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="productNum" jdbcType="VARCHAR" property="productnum" />
+    <result column="productName" jdbcType="VARCHAR" property="productname" />
+    <result column="productSpecification" jdbcType="VARCHAR" property="productspecification" />
+    <result column="productColor" jdbcType="VARCHAR" property="productcolor" />
+    <result column="productMaterials" jdbcType="VARCHAR" property="productmaterials" />
+    <result column="productIngredient" jdbcType="VARCHAR" property="productingredient" />
+    <result column="productUnit" jdbcType="VARCHAR" property="productunit" />
+    <result column="productDefaultStore" jdbcType="VARCHAR" property="productdefaultstore" />
+    <result column="productDefaultSupplier" jdbcType="VARCHAR" property="productdefaultsupplier" />
+    <result column="productSell" jdbcType="DECIMAL" property="productsell" />
+    <result column="productPurchasing" jdbcType="DECIMAL" property="productpurchasing" />
+    <result column="productCostPrice" jdbcType="DECIMAL" property="productcostprice" />
+    <result column="productRemark" jdbcType="VARCHAR" property="productremark" />
+    <result column="productTaxRate" jdbcType="VARCHAR" property="producttaxrate" />
+    <result column="typeId" jdbcType="VARCHAR" property="typeid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, productNum, productName, productSpecification, productColor, productMaterials, 
+    productIngredient, productUnit, productDefaultStore, productDefaultSupplier, productSell, 
+    productPurchasing, productCostPrice, productRemark, productTaxRate, typeId, `status`, 
+    url
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.ProductExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from product
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.ProductExample">
+    delete from product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Product" useGeneratedKeys="true">
+    insert into product (productNum, productName, productSpecification, 
+      productColor, productMaterials, productIngredient, 
+      productUnit, productDefaultStore, productDefaultSupplier, 
+      productSell, productPurchasing, productCostPrice, 
+      productRemark, productTaxRate, typeId, 
+      `status`, url)
+    values (#{productnum,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR}, #{productspecification,jdbcType=VARCHAR}, 
+      #{productcolor,jdbcType=VARCHAR}, #{productmaterials,jdbcType=VARCHAR}, #{productingredient,jdbcType=VARCHAR}, 
+      #{productunit,jdbcType=VARCHAR}, #{productdefaultstore,jdbcType=VARCHAR}, #{productdefaultsupplier,jdbcType=VARCHAR}, 
+      #{productsell,jdbcType=DECIMAL}, #{productpurchasing,jdbcType=DECIMAL}, #{productcostprice,jdbcType=DECIMAL}, 
+      #{productremark,jdbcType=VARCHAR}, #{producttaxrate,jdbcType=VARCHAR}, #{typeid,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Product" useGeneratedKeys="true">
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="productnum != null">
+        productNum,
+      </if>
+      <if test="productname != null">
+        productName,
+      </if>
+      <if test="productspecification != null">
+        productSpecification,
+      </if>
+      <if test="productcolor != null">
+        productColor,
+      </if>
+      <if test="productmaterials != null">
+        productMaterials,
+      </if>
+      <if test="productingredient != null">
+        productIngredient,
+      </if>
+      <if test="productunit != null">
+        productUnit,
+      </if>
+      <if test="productdefaultstore != null">
+        productDefaultStore,
+      </if>
+      <if test="productdefaultsupplier != null">
+        productDefaultSupplier,
+      </if>
+      <if test="productsell != null">
+        productSell,
+      </if>
+      <if test="productpurchasing != null">
+        productPurchasing,
+      </if>
+      <if test="productcostprice != null">
+        productCostPrice,
+      </if>
+      <if test="productremark != null">
+        productRemark,
+      </if>
+      <if test="producttaxrate != null">
+        productTaxRate,
+      </if>
+      <if test="typeid != null">
+        typeId,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="productnum != null">
+        #{productnum,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null">
+        #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="productspecification != null">
+        #{productspecification,jdbcType=VARCHAR},
+      </if>
+      <if test="productcolor != null">
+        #{productcolor,jdbcType=VARCHAR},
+      </if>
+      <if test="productmaterials != null">
+        #{productmaterials,jdbcType=VARCHAR},
+      </if>
+      <if test="productingredient != null">
+        #{productingredient,jdbcType=VARCHAR},
+      </if>
+      <if test="productunit != null">
+        #{productunit,jdbcType=VARCHAR},
+      </if>
+      <if test="productdefaultstore != null">
+        #{productdefaultstore,jdbcType=VARCHAR},
+      </if>
+      <if test="productdefaultsupplier != null">
+        #{productdefaultsupplier,jdbcType=VARCHAR},
+      </if>
+      <if test="productsell != null">
+        #{productsell,jdbcType=DECIMAL},
+      </if>
+      <if test="productpurchasing != null">
+        #{productpurchasing,jdbcType=DECIMAL},
+      </if>
+      <if test="productcostprice != null">
+        #{productcostprice,jdbcType=DECIMAL},
+      </if>
+      <if test="productremark != null">
+        #{productremark,jdbcType=VARCHAR},
+      </if>
+      <if test="producttaxrate != null">
+        #{producttaxrate,jdbcType=VARCHAR},
+      </if>
+      <if test="typeid != null">
+        #{typeid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.ProductExample" resultType="java.lang.Long">
+    select count(*) from product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+    <update id="updateByExampleSelective" parameterType="map">
+    update product
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.productnum != null">
+        productNum = #{record.productnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productname != null">
+        productName = #{record.productname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productspecification != null">
+        productSpecification = #{record.productspecification,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productcolor != null">
+        productColor = #{record.productcolor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productmaterials != null">
+        productMaterials = #{record.productmaterials,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productingredient != null">
+        productIngredient = #{record.productingredient,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productunit != null">
+        productUnit = #{record.productunit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productdefaultstore != null">
+        productDefaultStore = #{record.productdefaultstore,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productdefaultsupplier != null">
+        productDefaultSupplier = #{record.productdefaultsupplier,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productsell != null">
+        productSell = #{record.productsell,jdbcType=DECIMAL},
+      </if>
+      <if test="record.productpurchasing != null">
+        productPurchasing = #{record.productpurchasing,jdbcType=DECIMAL},
+      </if>
+      <if test="record.productcostprice != null">
+        productCostPrice = #{record.productcostprice,jdbcType=DECIMAL},
+      </if>
+      <if test="record.productremark != null">
+        productRemark = #{record.productremark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.producttaxrate != null">
+        productTaxRate = #{record.producttaxrate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.typeid != null">
+        typeId = #{record.typeid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.url != null">
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update product
+    set id = #{record.id,jdbcType=BIGINT},
+      productNum = #{record.productnum,jdbcType=VARCHAR},
+      productName = #{record.productname,jdbcType=VARCHAR},
+      productSpecification = #{record.productspecification,jdbcType=VARCHAR},
+      productColor = #{record.productcolor,jdbcType=VARCHAR},
+      productMaterials = #{record.productmaterials,jdbcType=VARCHAR},
+      productIngredient = #{record.productingredient,jdbcType=VARCHAR},
+      productUnit = #{record.productunit,jdbcType=VARCHAR},
+      productDefaultStore = #{record.productdefaultstore,jdbcType=VARCHAR},
+      productDefaultSupplier = #{record.productdefaultsupplier,jdbcType=VARCHAR},
+      productSell = #{record.productsell,jdbcType=DECIMAL},
+      productPurchasing = #{record.productpurchasing,jdbcType=DECIMAL},
+      productCostPrice = #{record.productcostprice,jdbcType=DECIMAL},
+      productRemark = #{record.productremark,jdbcType=VARCHAR},
+      productTaxRate = #{record.producttaxrate,jdbcType=VARCHAR},
+      typeId = #{record.typeid,jdbcType=VARCHAR},
+      `status` = #{record.status,jdbcType=INTEGER},
+      url = #{record.url,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Product">
+    update product
+    <set>
+      <if test="productnum != null">
+        productNum = #{productnum,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null">
+        productName = #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="productspecification != null">
+        productSpecification = #{productspecification,jdbcType=VARCHAR},
+      </if>
+      <if test="productcolor != null">
+        productColor = #{productcolor,jdbcType=VARCHAR},
+      </if>
+      <if test="productmaterials != null">
+        productMaterials = #{productmaterials,jdbcType=VARCHAR},
+      </if>
+      <if test="productingredient != null">
+        productIngredient = #{productingredient,jdbcType=VARCHAR},
+      </if>
+      <if test="productunit != null">
+        productUnit = #{productunit,jdbcType=VARCHAR},
+      </if>
+      <if test="productdefaultstore != null">
+        productDefaultStore = #{productdefaultstore,jdbcType=VARCHAR},
+      </if>
+      <if test="productdefaultsupplier != null">
+        productDefaultSupplier = #{productdefaultsupplier,jdbcType=VARCHAR},
+      </if>
+      <if test="productsell != null">
+        productSell = #{productsell,jdbcType=DECIMAL},
+      </if>
+      <if test="productpurchasing != null">
+        productPurchasing = #{productpurchasing,jdbcType=DECIMAL},
+      </if>
+      <if test="productcostprice != null">
+        productCostPrice = #{productcostprice,jdbcType=DECIMAL},
+      </if>
+      <if test="productremark != null">
+        productRemark = #{productremark,jdbcType=VARCHAR},
+      </if>
+      <if test="producttaxrate != null">
+        productTaxRate = #{producttaxrate,jdbcType=VARCHAR},
+      </if>
+      <if test="typeid != null">
+        typeId = #{typeid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="url != null">
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Product">
+    update product
+    set productNum = #{productnum,jdbcType=VARCHAR},
+      productName = #{productname,jdbcType=VARCHAR},
+      productSpecification = #{productspecification,jdbcType=VARCHAR},
+      productColor = #{productcolor,jdbcType=VARCHAR},
+      productMaterials = #{productmaterials,jdbcType=VARCHAR},
+      productIngredient = #{productingredient,jdbcType=VARCHAR},
+      productUnit = #{productunit,jdbcType=VARCHAR},
+      productDefaultStore = #{productdefaultstore,jdbcType=VARCHAR},
+      productDefaultSupplier = #{productdefaultsupplier,jdbcType=VARCHAR},
+      productSell = #{productsell,jdbcType=DECIMAL},
+      productPurchasing = #{productpurchasing,jdbcType=DECIMAL},
+      productCostPrice = #{productcostprice,jdbcType=DECIMAL},
+      productRemark = #{productremark,jdbcType=VARCHAR},
+      productTaxRate = #{producttaxrate,jdbcType=VARCHAR},
+      typeId = #{typeid,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=INTEGER},
+      url = #{url,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="findCountByStatus" resultType="java.lang.Long">
+    <bind name="CUSTOMER_STATUS_DELETE" value="@com.example.manage.constant.ConstantsForDomain@CUSTOMER_STATUS_DELETE" />
+    select count(*)
+    from product p
+    where p.status !=#{CUSTOMER_STATUS_DELETE}
+  </select>
+  <select id="findPage" resultType="com.example.manage.domain.Product"
+          parameterType="com.example.manage.util.PageRequest">
+    <bind name="CUSTOMER_STATUS_DELETE" value="@com.example.manage.constant.ConstantsForDomain@CUSTOMER_STATUS_DELETE" />
+    select *
+    from product p
+    where p.status != #{CUSTOMER_STATUS_DELETE}
+    limit #{pageRequest.offset}, #{pageRequest.pageSize}
+  </select>
+</mapper>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.DocumentaryMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Documentary">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="merDate" jdbcType="TIMESTAMP" property="merdate" />
+    <result column="productionId" jdbcType="BIGINT" property="productionid" />
+    <result column="cureId" jdbcType="BIGINT" property="cureid" />
+    <result column="merchanerId" jdbcType="BIGINT" property="merchanerid" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="imgUrl" jdbcType="VARCHAR" property="imgurl" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, merDate, productionId, cureId, merchanerId, remark, imgUrl
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.DocumentaryExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from documentary
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from documentary
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from documentary
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.DocumentaryExample">
+    delete from documentary
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Documentary" useGeneratedKeys="true">
+    insert into documentary (merDate, productionId, cureId, 
+      merchanerId, remark, imgUrl
+      )
+    values (#{merdate,jdbcType=TIMESTAMP}, #{productionid,jdbcType=BIGINT}, #{cureid,jdbcType=BIGINT}, 
+      #{merchanerid,jdbcType=BIGINT}, #{remark,jdbcType=VARCHAR}, #{imgurl,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Documentary" useGeneratedKeys="true">
+    insert into documentary
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="merdate != null">
+        merDate,
+      </if>
+      <if test="productionid != null">
+        productionId,
+      </if>
+      <if test="cureid != null">
+        cureId,
+      </if>
+      <if test="merchanerid != null">
+        merchanerId,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="imgurl != null">
+        imgUrl,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="merdate != null">
+        #{merdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productionid != null">
+        #{productionid,jdbcType=BIGINT},
+      </if>
+      <if test="cureid != null">
+        #{cureid,jdbcType=BIGINT},
+      </if>
+      <if test="merchanerid != null">
+        #{merchanerid,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="imgurl != null">
+        #{imgurl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.DocumentaryExample" resultType="java.lang.Long">
+    select count(*) from documentary
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update documentary
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.merdate != null">
+        merDate = #{record.merdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.productionid != null">
+        productionId = #{record.productionid,jdbcType=BIGINT},
+      </if>
+      <if test="record.cureid != null">
+        cureId = #{record.cureid,jdbcType=BIGINT},
+      </if>
+      <if test="record.merchanerid != null">
+        merchanerId = #{record.merchanerid,jdbcType=BIGINT},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imgurl != null">
+        imgUrl = #{record.imgurl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update documentary
+    set id = #{record.id,jdbcType=BIGINT},
+      merDate = #{record.merdate,jdbcType=TIMESTAMP},
+      productionId = #{record.productionid,jdbcType=BIGINT},
+      cureId = #{record.cureid,jdbcType=BIGINT},
+      merchanerId = #{record.merchanerid,jdbcType=BIGINT},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      imgUrl = #{record.imgurl,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Documentary">
+    update documentary
+    <set>
+      <if test="merdate != null">
+        merDate = #{merdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productionid != null">
+        productionId = #{productionid,jdbcType=BIGINT},
+      </if>
+      <if test="cureid != null">
+        cureId = #{cureid,jdbcType=BIGINT},
+      </if>
+      <if test="merchanerid != null">
+        merchanerId = #{merchanerid,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="imgurl != null">
+        imgUrl = #{imgurl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Documentary">
+    update documentary
+    set merDate = #{merdate,jdbcType=TIMESTAMP},
+      productionId = #{productionid,jdbcType=BIGINT},
+      cureId = #{cureid,jdbcType=BIGINT},
+      merchanerId = #{merchanerid,jdbcType=BIGINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      imgUrl = #{imgurl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="findCount" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select count(*)
+    from documentary d
+    where d.productionId =#{productionId}
+  </select>
+  <select id="selectByPayOrderId" resultType="com.example.manage.domain.Documentary">
+    select *
+    from documentary d
+    where d.productionId =#{productionId}
+    limit #{pageRequest.offset}, #{pageRequest.pageSize}
+  </select>
+
+
+</mapper>

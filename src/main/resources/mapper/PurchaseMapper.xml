@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.manage.mapper.PurchaseMapper">
+  <resultMap id="BaseResultMap" type="com.example.manage.domain.Purchase">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="procureType" jdbcType="VARCHAR" property="procuretype" />
+    <result column="buyerId" jdbcType="BIGINT" property="buyerid" />
+    <result column="supplierName" jdbcType="VARCHAR" property="suppliername" />
+    <result column="supplierLinkman" jdbcType="VARCHAR" property="supplierlinkman" />
+    <result column="supplierTellphone" jdbcType="VARCHAR" property="suppliertellphone" />
+    <result column="supperlierPayType" jdbcType="VARCHAR" property="supperlierpaytype" />
+    <result column="supperlierCard" jdbcType="VARCHAR" property="supperliercard" />
+    <result column="payId" jdbcType="BIGINT" property="payid" />
+    <result column="settleType" jdbcType="VARCHAR" property="settletype" />
+    <result column="planPayDate" jdbcType="TIMESTAMP" property="planpaydate" />
+    <result column="planDeliveryDate" jdbcType="TIMESTAMP" property="plandeliverydate" />
+    <result column="buyDate" jdbcType="TIMESTAMP" property="buydate" />
+    <result column="tax" jdbcType="VARCHAR" property="tax" />
+    <result column="rental" jdbcType="VARCHAR" property="rental" />
+    <result column="payRental" jdbcType="VARCHAR" property="payrental" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, procureType, buyerId, supplierName, supplierLinkman, supplierTellphone, supperlierPayType, 
+    supperlierCard, payId, settleType, planPayDate, planDeliveryDate, buyDate, tax, rental, 
+    payRental, remark
+  </sql>
+  <select id="selectByExample" parameterType="com.example.manage.mapper.PurchaseExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from purchase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from purchase
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from purchase
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.manage.mapper.PurchaseExample">
+    delete from purchase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Purchase" useGeneratedKeys="true">
+    insert into purchase (procureType, buyerId, supplierName, 
+      supplierLinkman, supplierTellphone, supperlierPayType, 
+      supperlierCard, payId, settleType, 
+      planPayDate, planDeliveryDate, buyDate, 
+      tax, rental, payRental, 
+      remark)
+    values (#{procuretype,jdbcType=VARCHAR}, #{buyerid,jdbcType=BIGINT}, #{suppliername,jdbcType=VARCHAR}, 
+      #{supplierlinkman,jdbcType=VARCHAR}, #{suppliertellphone,jdbcType=VARCHAR}, #{supperlierpaytype,jdbcType=VARCHAR}, 
+      #{supperliercard,jdbcType=VARCHAR}, #{payid,jdbcType=BIGINT}, #{settletype,jdbcType=VARCHAR}, 
+      #{planpaydate,jdbcType=TIMESTAMP}, #{plandeliverydate,jdbcType=TIMESTAMP}, #{buydate,jdbcType=TIMESTAMP}, 
+      #{tax,jdbcType=VARCHAR}, #{rental,jdbcType=VARCHAR}, #{payrental,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.manage.domain.Purchase" useGeneratedKeys="true">
+    insert into purchase
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="procuretype != null">
+        procureType,
+      </if>
+      <if test="buyerid != null">
+        buyerId,
+      </if>
+      <if test="suppliername != null">
+        supplierName,
+      </if>
+      <if test="supplierlinkman != null">
+        supplierLinkman,
+      </if>
+      <if test="suppliertellphone != null">
+        supplierTellphone,
+      </if>
+      <if test="supperlierpaytype != null">
+        supperlierPayType,
+      </if>
+      <if test="supperliercard != null">
+        supperlierCard,
+      </if>
+      <if test="payid != null">
+        payId,
+      </if>
+      <if test="settletype != null">
+        settleType,
+      </if>
+      <if test="planpaydate != null">
+        planPayDate,
+      </if>
+      <if test="plandeliverydate != null">
+        planDeliveryDate,
+      </if>
+      <if test="buydate != null">
+        buyDate,
+      </if>
+      <if test="tax != null">
+        tax,
+      </if>
+      <if test="rental != null">
+        rental,
+      </if>
+      <if test="payrental != null">
+        payRental,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="procuretype != null">
+        #{procuretype,jdbcType=VARCHAR},
+      </if>
+      <if test="buyerid != null">
+        #{buyerid,jdbcType=BIGINT},
+      </if>
+      <if test="suppliername != null">
+        #{suppliername,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierlinkman != null">
+        #{supplierlinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="suppliertellphone != null">
+        #{suppliertellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="supperlierpaytype != null">
+        #{supperlierpaytype,jdbcType=VARCHAR},
+      </if>
+      <if test="supperliercard != null">
+        #{supperliercard,jdbcType=VARCHAR},
+      </if>
+      <if test="payid != null">
+        #{payid,jdbcType=BIGINT},
+      </if>
+      <if test="settletype != null">
+        #{settletype,jdbcType=VARCHAR},
+      </if>
+      <if test="planpaydate != null">
+        #{planpaydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plandeliverydate != null">
+        #{plandeliverydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="buydate != null">
+        #{buydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tax != null">
+        #{tax,jdbcType=VARCHAR},
+      </if>
+      <if test="rental != null">
+        #{rental,jdbcType=VARCHAR},
+      </if>
+      <if test="payrental != null">
+        #{payrental,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.manage.mapper.PurchaseExample" resultType="java.lang.Long">
+    select count(*) from purchase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update purchase
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.procuretype != null">
+        procureType = #{record.procuretype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.buyerid != null">
+        buyerId = #{record.buyerid,jdbcType=BIGINT},
+      </if>
+      <if test="record.suppliername != null">
+        supplierName = #{record.suppliername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierlinkman != null">
+        supplierLinkman = #{record.supplierlinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="record.suppliertellphone != null">
+        supplierTellphone = #{record.suppliertellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supperlierpaytype != null">
+        supperlierPayType = #{record.supperlierpaytype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supperliercard != null">
+        supperlierCard = #{record.supperliercard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payid != null">
+        payId = #{record.payid,jdbcType=BIGINT},
+      </if>
+      <if test="record.settletype != null">
+        settleType = #{record.settletype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planpaydate != null">
+        planPayDate = #{record.planpaydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.plandeliverydate != null">
+        planDeliveryDate = #{record.plandeliverydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.buydate != null">
+        buyDate = #{record.buydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tax != null">
+        tax = #{record.tax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rental != null">
+        rental = #{record.rental,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payrental != null">
+        payRental = #{record.payrental,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update purchase
+    set id = #{record.id,jdbcType=BIGINT},
+      procureType = #{record.procuretype,jdbcType=VARCHAR},
+      buyerId = #{record.buyerid,jdbcType=BIGINT},
+      supplierName = #{record.suppliername,jdbcType=VARCHAR},
+      supplierLinkman = #{record.supplierlinkman,jdbcType=VARCHAR},
+      supplierTellphone = #{record.suppliertellphone,jdbcType=VARCHAR},
+      supperlierPayType = #{record.supperlierpaytype,jdbcType=VARCHAR},
+      supperlierCard = #{record.supperliercard,jdbcType=VARCHAR},
+      payId = #{record.payid,jdbcType=BIGINT},
+      settleType = #{record.settletype,jdbcType=VARCHAR},
+      planPayDate = #{record.planpaydate,jdbcType=TIMESTAMP},
+      planDeliveryDate = #{record.plandeliverydate,jdbcType=TIMESTAMP},
+      buyDate = #{record.buydate,jdbcType=TIMESTAMP},
+      tax = #{record.tax,jdbcType=VARCHAR},
+      rental = #{record.rental,jdbcType=VARCHAR},
+      payRental = #{record.payrental,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.manage.domain.Purchase">
+    update purchase
+    <set>
+      <if test="procuretype != null">
+        procureType = #{procuretype,jdbcType=VARCHAR},
+      </if>
+      <if test="buyerid != null">
+        buyerId = #{buyerid,jdbcType=BIGINT},
+      </if>
+      <if test="suppliername != null">
+        supplierName = #{suppliername,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierlinkman != null">
+        supplierLinkman = #{supplierlinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="suppliertellphone != null">
+        supplierTellphone = #{suppliertellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="supperlierpaytype != null">
+        supperlierPayType = #{supperlierpaytype,jdbcType=VARCHAR},
+      </if>
+      <if test="supperliercard != null">
+        supperlierCard = #{supperliercard,jdbcType=VARCHAR},
+      </if>
+      <if test="payid != null">
+        payId = #{payid,jdbcType=BIGINT},
+      </if>
+      <if test="settletype != null">
+        settleType = #{settletype,jdbcType=VARCHAR},
+      </if>
+      <if test="planpaydate != null">
+        planPayDate = #{planpaydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plandeliverydate != null">
+        planDeliveryDate = #{plandeliverydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="buydate != null">
+        buyDate = #{buydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tax != null">
+        tax = #{tax,jdbcType=VARCHAR},
+      </if>
+      <if test="rental != null">
+        rental = #{rental,jdbcType=VARCHAR},
+      </if>
+      <if test="payrental != null">
+        payRental = #{payrental,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.manage.domain.Purchase">
+    update purchase
+    set procureType = #{procuretype,jdbcType=VARCHAR},
+      buyerId = #{buyerid,jdbcType=BIGINT},
+      supplierName = #{suppliername,jdbcType=VARCHAR},
+      supplierLinkman = #{supplierlinkman,jdbcType=VARCHAR},
+      supplierTellphone = #{suppliertellphone,jdbcType=VARCHAR},
+      supperlierPayType = #{supperlierpaytype,jdbcType=VARCHAR},
+      supperlierCard = #{supperliercard,jdbcType=VARCHAR},
+      payId = #{payid,jdbcType=BIGINT},
+      settleType = #{settletype,jdbcType=VARCHAR},
+      planPayDate = #{planpaydate,jdbcType=TIMESTAMP},
+      planDeliveryDate = #{plandeliverydate,jdbcType=TIMESTAMP},
+      buyDate = #{buydate,jdbcType=TIMESTAMP},
+      tax = #{tax,jdbcType=VARCHAR},
+      rental = #{rental,jdbcType=VARCHAR},
+      payRental = #{payrental,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findPurchasePage" parameterType="com.example.manage.util.PageRequest" resultType="com.example.manage.domain.Purchase">
+    select *
+    from purchase p
+    limit #{pageRequest.offset}, #{pageRequest.pageSize}
+  </select>
+
+<!--  &amp;lt;/select&amp;gt;-->
+
+</mapper>
